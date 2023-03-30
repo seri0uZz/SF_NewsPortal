@@ -4,19 +4,10 @@ register = template.Library()
 
 
 
-BAD_WORDS = ['Редиски',
-             'редиски',
+BAD_WORDS = ['Жопа',
+             'вонючка',
              ]
 
-# @register.filter()
-# def censor(NEW_WORD):
-#
-#     for word in BAD_WORDS:
-#         if word.title() in BAD_WORDS:
-#             repl_word = word[0] + (len(word) - 1) * '*'
-#             NEW_WORD = NEW_WORD.replace(word, repl_word)
-#
-#         return NEW_WORD
 @register.filter()
 def censor(text: str):
     text_list = text.split()
